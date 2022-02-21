@@ -1,3 +1,5 @@
+// function to convert integer numbers into ordinal
+
 String ordinal(int number) {
   if (!(number >= 1 && number <= 100)) {
     throw Exception('Invalid number');

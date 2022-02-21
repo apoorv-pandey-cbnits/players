@@ -15,7 +15,7 @@ class PlayersProvider extends ChangeNotifier {
   List<Data>? get players => _players;
 
   List<filter.Data>? get filterDates => _filterDates;
-
+  // get Players from provider
   Future getPlayers([int? filterId]) async {
     final result = await getListOfPlayers(filterId);
     final decode = jsonDecode(result.body);
@@ -26,6 +26,7 @@ class PlayersProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // get filters from provider
   Future getFilters() async {
     final result = await getListOfFilters();
     final decode = jsonDecode(result.body);

@@ -18,6 +18,7 @@ class _PlayersListScreenState extends State<PlayersListScreen> {
   @override
   void initState() {
     super.initState();
+    // fetch the list of players from the API
     Future.delayed(Duration.zero, () async {
       await playersProvider.getFilters();
       if (playersProvider.filterDates!.isNotEmpty) {
